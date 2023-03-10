@@ -1,0 +1,29 @@
+{
+  "name": "typescript-project",
+  "version": "1.0.0",
+  "description": "",
+  "license": "BSD-3-Clause",
+  "private": true,
+  "scripts": {
+    "build": "d2-app-scripts build",
+    "postbuild": "tsc",
+    "start": "d2-app-scripts start",
+    "test": "d2-app-scripts test",
+    "deploy": "d2-app-scripts deploy"
+  },
+  "devDependencies": {
+    "@dhis2/cli-app-scripts": "^10.3.1",
+    "@types/jest": "^29.4.0",
+    "@types/node": "^18.15.0"
+  },
+  "dependencies": {
+    "@dhis2/app-runtime": "^3.9.0"
+  },
+  "main": "./build/cjs/index.js",
+  "module": "./build/es/index.js",
+  "types": "./build/types/index.d.js",
+  "exports": {
+    "import": "./build/es/index.js",
+    "require": "./build/cjs/index.js"
+  }
+}
